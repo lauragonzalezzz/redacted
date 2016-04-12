@@ -31,3 +31,6 @@ function redact(req, res, next){
 };
 
 module.exports = redact;
+
+// var re = new RegExp(key, 'gi');
+// replace(re)
