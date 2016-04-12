@@ -12,6 +12,9 @@ app.post('/message', function(req, res){
   res.status(200).send(req.body.message);
 });
 
-var server = app.listen(8080, function(){
-  console.log('App Listening!');
-});
+if(!module.parent){
+  var server = app.listen(8080, function(){
+  console.log("App Listening!");
+  });
+}
+module.exports = server
